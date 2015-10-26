@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+  <title>Calculator</title>
+  <script src="jquery-1.11.1.min.js"></script>
+  <script src="calculator-min.js"></script>
+<link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="wrapper" class="border">
+       <div id="title"><h1>Calculator</h1></div>
+       <div>
+         <span id="question">
+            <span id="op1"></span>
+            <span id="operator"></span>
+            <span id="op2"></span>
+            =
+            <input type="number" id="result"/>
+         </span>
+       </div>
+        <div id="infoDiv">
+            <span id="timer" class="infoBox border">Time :  <span id="timeout"></span></span>
+            <span id="ok" class="infoBox border">OK :<span id="nbOk">0</span></span>
+            <span id="fail" class="infoBox border">Fail :<span id="nbFail">0</span></span>
+        </div>
+       <div id="choiceDiv" class="border">
+            <span id="opChoice" class="choice">
+                 Operation :
+                 <select id="selectOp" class="choice">
+                    <option value="+">Addition</option>
+                    <option value="-">Subtraction</option>
+                    <option value="*">Multiplication</option>
+                </select>
+            </span>            
+            <span id="difficultyChoice" class="choice">
+                 Difficulty :
+                 <select id="selectDifficulty" class="choice">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Difficult">Difficult</option>
+                </select>
+            </span>
+        </div>
+   </div>
+   <div id="divScore">
+     <table>
+       <thead>
+         <tr><th>Ok</th><th>Fail</th><th>Rate</th></tr>
+       </thead>
+       <tbody id="tabScore"></tbody>
+     </table>
+     <input id="replay" type="button" value="Play again">
+     <input id="resetScore" type="button" value="Reset scores">
+  </div>
+</body>
+</html>
